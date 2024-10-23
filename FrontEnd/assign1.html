@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assign1.css">
+</head>
+<body>
+    <header class="bg-primary text-white p-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="assign1.html">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="secondpage.html">Survey</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="loginpage.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <section id="intro">
+            <h2 class="text-center" id = "h2">About the Survey</h2>
+            <p class="text-center">This survey is designed to gather insights on {NameOfTopic}. Your participation helps improve {NameOfGoal}.</p>
+        </section>
+
+        <section id="carousel" class="my-5">
+            <div id="surveyCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbeKtxZNmLm6ODwzeFn1QS-_LJ9kfLKZMTg&s" class="d-block w-100" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://static.wikia.nocookie.net/spongefan/images/1/10/Letmetell.JPG/revision/latest/scale-to-width-down/300?cb=20130830002340" class="d-block w-100" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/438/335/datas/gallery.jpg" class="d-block w-100" alt="Third slide">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#surveyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#surveyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="image-grid" class="container my-5">
+            <h2 class="text-center">Image Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 grid-item">
+                    <figure class="text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbeKtxZNmLm6ODwzeFn1QS-_LJ9kfLKZMTg&s" alt="Image representing the survey">
+                        <figcaption>Participate and share your thoughts</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 grid-item">
+                    <figure class="text-center">
+                        <img src="https://static.wikia.nocookie.net/spongefan/images/1/10/Letmetell.JPG/revision/latest/scale-to-width-down/300?cb=20130830002340" alt="Image representing the survey">
+                        <figcaption>Engage and provide feedback</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 grid-item">
+                    <figure class="text-center">
+                        <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/000/438/335/datas/gallery.jpg" alt="Image representing the survey">
+                        <figcaption>Help us improve by sharing your experience</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-flex justify-content-center my-3">
+            <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
+        </div>
+
+        <div id="popupForm" class="popup-form" style="display:none;">
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+            <button id="closePopup" class="btn btn-secondary">Close</button>
+        </div>
+
+        <section id="buttons" class="text-center my-5">
+            <a href="secondpage.html" class="btn btn-primary me-2">Go to Survey</a>
+            <a href="loginpage.html" class="btn btn-secondary">Login</a>
+        </section>
+
+        <div class="d-flex justify-content-center my-3">
+            <button id="changeColorBtn" class="btn btn-secondary">Change Background</button>
+        </div>
+
+        <div class="d-flex justify-content-center my-3">
+            <button id="sortRatingsBtn" class="btn btn-info">Sort User Ratings</button>
+        </div>
+
+        <section id="faq" class="my-5">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Question 1: What is this survey about?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            This survey helps us improve {NameOfGoal}.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Question 2: How will your responses be used?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            We use your responses for analysis and to improve our services.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-flex justify-content-center my-3">
+            <button id="toggleThemeBtn" class="btn btn-dark">(Light/Dark) Mode  </button>
+        </div>
+        <div class="d-flex justify-content-center my-3">
+            <button id="getWeatherBtn" class="btn btn-info">Take weather</button>
+        </div>
+        <div id="weatherDisplay" class="text-center my-3"></div>
+        
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p id="dateTime"></p>
+        <p>Created by Aidar, September 2024</p>
+        <p>Contact: @sabyrrgali</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assign1.js"></script>
+</body>
+</html>

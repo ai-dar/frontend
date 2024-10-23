@@ -1,0 +1,96 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #87CEEB;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            background-color: #002366;
+            color: white;
+            padding: 20px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-left a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-left a:hover {
+            text-decoration: underline;
+        }
+        .nav-right {
+            margin-left: auto;
+        }
+        .nav-right a {
+            background-color: white;
+            color: #002366;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .nav-right a:hover {
+            background-color: #00509E;
+            color: white;
+        }
+        main {
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex: 1; 
+        }
+        h2 {
+            text-align: center;
+            color: #002366;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #002366;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #002366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00509E;
+        }
+        footer p {
+            margin: 5px 0;
+            text-align: center;
+        }
