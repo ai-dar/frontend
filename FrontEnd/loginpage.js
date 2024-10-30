@@ -20,3 +20,9 @@ window.addEventListener('load', function() {
         alert("Welcome back, " + loggedInUser);
     }
 });
+
+document.getElementById("logoutBtn").addEventListener("click", function() {
+    localStorage.removeItem('loggedInUser');
+    alert("You have been logged out.");
+    window.location.href = "loginpage.html";
+});

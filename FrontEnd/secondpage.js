@@ -24,7 +24,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
         
         localStorage.setItem("surveyHistory", JSON.stringify(surveyHistory));
 
-        alert("Спасибо за участие в опросе!");
+        alert("THANKS!!!!!!");
     }
 });
 
@@ -33,15 +33,15 @@ document.getElementById("showHistoryBtn").addEventListener("click", function() {
     const surveyHistoryList = document.getElementById("surveyHistoryList");
 
     if (surveyHistory.length === 0) {
-        surveyHistoryList.innerHTML = "<p>История опросов пуста.</p>";
+        surveyHistoryList.innerHTML = "<p>History is empty.</p>";
     } else {
         let html = "<ul class='list-group'>";
         surveyHistory.forEach((survey, index) => {
             html += `<li class="list-group-item">
-                        <strong>Имя:</strong> ${survey.name}<br>
-                        <strong>Рейтинг:</strong> ${survey.rating}<br>
-                        <strong>Комментарий:</strong> ${survey.comment}<br>
-                        <strong>Дата:</strong> ${survey.date}
+                        <strong>Name:</strong> ${survey.name}<br>
+                        <strong>Raiting:</strong> ${survey.rating}<br>
+                        <strong>Comments:</strong> ${survey.comment}<br>
+                        <strong>Date:</strong> ${survey.date}
                     </li>`;
         });
         html += "</ul>";

@@ -2,6 +2,13 @@
 const now = new Date();
 document.getElementById("dateTime").textContent = now.toLocaleString();
 
+document.getElementById("changeColorBtn").addEventListener("click", function() {
+    const colors = ["#f1c40f", "#e74c3c", "#3498db", "#2ecc71", "#9b59b6"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+    playSound();
+});
+
 document.getElementById("toggleThemeBtn").addEventListener("click", function() {
     const currentTheme = document.body.classList.toggle('dark-mode') ? 'dark' : 'light';
     localStorage.setItem('theme', currentTheme); 
@@ -45,7 +52,7 @@ document.getElementById("getWeatherBtn").addEventListener("click", function() {
         .then(data => {
             const weather = data.weather[0].description;
             const temp = data.main.temp;
-            document.getElementById("weatherDisplay").textContent = `Погода в ${city}: ${weather}, Температура: ${temp}°C`;
+            document.getElementById("weatherDisplay").textContent = `Weather in ${city}: ${weather}, Temperature: ${temp}°C`;
             
         })
         .catch(error => console.log("Error!!: ", error));
