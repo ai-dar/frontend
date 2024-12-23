@@ -1,3 +1,4 @@
+/* Сброс основных стилей и общие стили */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,23 +6,117 @@
     font-family: Arial, sans-serif;
 }
 
-.dark-mode {
-    background-color: #333;
-    color: white;
-}
-
-.btn {
-    margin: 5px;
+.dark-mode{
+    background-color: #06222c;
+    color: #ffffff;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
     background-color: #87CEEB;
     color: #333;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.this {
+header, footer {
+    background-color: #002366;
+    color: white;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
     text-align: center;
+    color: #002366;
+    margin-bottom: 20px;
+}
+
+p, label {
+    color: #333;
+}
+
+input[type="text"], select, textarea, .form-control, .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #002366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #00509E;
+}
+.navbar-nav .nav-link, #userDisplayName, #authBtn, #toggleThemeBtn {
+    display: flex;
+    align-items: center;
+}
+
+#userDisplayName {
+    font-weight: bold;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+    color: white; 
+}
+
+.popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
 }
 
 .carousel-item {
@@ -40,143 +135,61 @@ body {
     margin: 0 auto;
 }
 
-header, footer {
-    background-color: #002366;
-    color: white;
-    padding: 20px 0;
+
+.dark-mode header, .dark-mode footer {
+    background-color: #000033;
+    color: white; 
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+.dark-mode .navbar-nav .nav-link {
+    color: #e0e0e0;
 }
 
-.nav-left a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-    font-size: 18px;
+.dark-mode main {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.nav-left a:hover {
-    text-decoration: underline;
+.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode label {
+    color: #ffffff;
 }
 
-.nav-right {
-    margin-left: auto;
+.dark-mode input[type="text"], .dark-mode select, .dark-mode textarea, .dark-mode .form-control, .dark-mode .form-select {
+    background-color: #333333;
+    color: #e0e0e0;
+    border: 1px solid #555555;
 }
 
-.nav-right a {
-    background-color: white;
-    color: #002366;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
+.dark-mode button, .dark-mode .btn-primary {
+    background-color: #444;
+    border-color: #555;
+    color: #e0e0e0;
 }
 
-.nav-right a:hover {
-    background-color: #00509E;
-    color: white;
+.dark-mode button:hover, .dark-mode .btn-primary:hover {
+    background-color: #6b6b6b;
+    border-color: #7a7a7a;
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.dark-mode .accordion-button:not(.collapsed) {
+    background-color: #444;
+    color: #ffffff;
 }
 
-.popup-form {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 1000;
+.dark-mode .accordion-body {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
 }
 
-h1 {
-    text-align: center;
-    color: white;
-    margin-bottom: 20px;
+.dark-mode .btn-secondary {
+    background-color: #555;
+    border-color: #666;
+    color: #e0e0e0;
 }
 
-h2 {
-    text-align: center;
-    color: #002366;
-    margin-bottom: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 40px;
-}
-
-figure {
-    text-align: center;
-    margin: 20px 0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-blockquote {
-    font-style: italic;
-    color: #555;
-    background-color: #f0f0f0;
-    border-left: 5px solid #ccc;
-    padding: 10px;
-    margin: 20px 0;
-}
-
-dl {
-    margin-bottom: 20px;
-}
-
-dt {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-dd {
-    margin-left: 20px;
-}
-
-footer p {
-    margin: 5px 0;
-    text-align: center;
-}
-
-button {
-    padding: 10px;
-    background-color: #002366;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-button:hover {
-    transform: scale(1.1);
-    background-color: #00509E;
-}
-
-.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode section, .dark-mode ul, .dark-mode dl {
-    color: lightblue;
+.dark-mode .popup-form {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444444;
 }

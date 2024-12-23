@@ -1,101 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+input[type="text"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #87CEEB;
-            color: #333;
-            line-height: 1.6;
-        }
-        header, footer {
-            background-color: #002366;
-            color: white;
-            padding: 20px 0;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .nav-left a {
-            color: white;
-            margin-right: 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .nav-left a:hover {
-            text-decoration: underline;
-        }
-        .nav-right {
-            margin-left: auto;
-        }
-        .nav-right a {
-            background-color: white;
-            color: #002366;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .nav-right a:hover {
-            background-color: #00509E;
-            color: white;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            text-align: center;
-            color: white;
-            margin-bottom: 20px;
-        }
-        h2 {
-            text-align: center;
-            color: #002366;
-            margin-bottom: 20px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        label {
-            font-weight: bold;
-            color: #002366;
-        }
-        input[type="text"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        button {
-            padding: 10px;
-            background-color: #002366;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #00509E;
-        }
-        footer p {
-            margin: 5px 0;
-            text-align: center;
-        }
+.dark-mode input[type="text"] {
+    background-color: #333;
+    color: #fff; 
+    border: 1px solid #555;
+}
+
+.dark-mode ::placeholder { 
+    color: #bbb; 
+    opacity: 1; 
+}
+body {
+    background-color: #87CEEB;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+    background-color: #002366;
+    color: white;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #002366;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #002366;
+}
+
+input[type="text"], select, textarea, .form-control, .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #002366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.navbar-nav .nav-link, #userDisplayName, #authBtn, #toggleThemeBtn {
+    display: flex;
+    align-items: center;
+}
+
+#userDisplayName {
+    font-weight: bold;
+}
+button:hover {
+    background-color: #00509E;
+}
+
+footer p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.dark-mode{
+    background-color: #06222c; 
+    color: #e0e0e0;
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: #000033; 
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+.dark-mode main {
+    background-color: #121212; 
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.dark-mode h1, .dark-mode h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .form-control, .dark-mode .form-select, .dark-mode input[type="text"],
+.dark-mode select, .dark-mode textarea {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border: 1px solid #4a4a4a;
+}
+
+.dark-mode label {
+    color: #cccccc;
+}
+
+.dark-mode .btn-primary, .dark-mode button {
+    background-color: #3a3a3a;
+    border-color: #4b4b4b;
+    color: #e0e0e0;
+}
+
+.dark-mode .btn-secondary {
+    background-color: #555555;
+    border-color: #666666;
+    color: #e0e0e0;
+}
+
+.dark-mode .btn-primary:hover, .dark-mode .btn-secondary:hover {
+    background-color: #6b6b6b;
+    border-color: #7a7a7a;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+.dark-mode .accordion-body {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode p, .dark-mode label, .dark-mode .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+.dark-mode .popup-form {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444444;
+}
